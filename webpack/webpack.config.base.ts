@@ -1,17 +1,17 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import path from "path";
+import webpack from "webpack";
 
-module.exports = {
-  mode: 'development',
+
+const configuration: webpack.Configuration = {
   entry: {
     index: './src/index.ts',
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     clean: true
   },
-  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Output Management',
@@ -36,3 +36,6 @@ module.exports = {
     },
   },
 };
+
+
+export default configuration;
