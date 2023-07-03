@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/bin/yarn run dev
+  /usr/bin/node /usr/bin/yarn add @eslint/config -D
 
 PATH: 
   /home/d0zzerr/.npm-global/bin:/home/d0zzerr/.cargo/bin:/home/d0zzerr/.pyenv/shims:/home/d0zzerr/.local/share/pnpm:/home/d0zzerr/.npm-global/bin:/home/d0zzerr/.cargo/bin:/home/d0zzerr/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
@@ -14,12 +14,17 @@ Platform:
   linux x64
 
 Trace: 
-  SyntaxError: /home/d0zzerr/Documents/FirstGame/package.json: Expected ',' or '}' after property value in JSON at position 237
-      at JSON.parse (<anonymous>)
-      at /usr/lib/node_modules/yarn/lib/cli.js:1629:59
-      at Generator.next (<anonymous>)
-      at step (/usr/lib/node_modules/yarn/lib/cli.js:310:30)
-      at /usr/lib/node_modules/yarn/lib/cli.js:321:13
+  Error: https://registry.yarnpkg.com/@eslint%2fconfig: Not found
+      at params.callback [as _callback] (/usr/lib/node_modules/yarn/lib/cli.js:66145:18)
+      at self.callback (/usr/lib/node_modules/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:511:28)
+      at Request.<anonymous> (/usr/lib/node_modules/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:511:28)
+      at IncomingMessage.<anonymous> (/usr/lib/node_modules/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:625:28)
+      at IncomingMessage.emit (node:events:523:35)
+      at endReadableNT (node:internal/streams/readable:1367:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 npm manifest: 
   {
@@ -31,13 +36,12 @@ npm manifest:
       "phaser": "^3.60.0"
     },
     "scripts": {
-      "dev": "webpack --env NODE_ENV=development"
+      "dev": "webpack --env NODE_ENV=development",
       "build": "webpack --env NODE_ENV=production"
     },
     "devDependencies": {
       "@types/node": "^20.3.3",
       "@types/webpack": "^5.28.1",
-      "cross-env": "^7.0.3",
       "html-webpack-plugin": "^5.5.3",
       "ts-loader": "^9.4.4",
       "ts-node": "^10.9.1",
@@ -803,14 +807,7 @@ Lockfile:
     resolved "https://registry.npmjs.org/create-require/-/create-require-1.1.1.tgz"
     integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
   
-  cross-env@^7.0.3:
-    version "7.0.3"
-    resolved "https://registry.npmjs.org/cross-env/-/cross-env-7.0.3.tgz"
-    integrity sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==
-    dependencies:
-      cross-spawn "^7.0.1"
-  
-  cross-spawn@^7.0.1, cross-spawn@^7.0.3:
+  cross-spawn@^7.0.3:
     version "7.0.3"
     resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
     integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==

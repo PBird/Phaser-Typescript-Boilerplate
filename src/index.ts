@@ -1,9 +1,10 @@
-import * as Phaser from 'phaser'
-import printMe from './print'
+import * as Phaser from "phaser";
 
-new Phaser.Game({});
+const config: Phaser.Types.Core.GameConfig = {
+  type: Phaser.AUTO,
+  width: 800,
+  height: 600,
+};
+const game = new Phaser.Game(config);
 
-
-printMe()
-
-
+export default game;
