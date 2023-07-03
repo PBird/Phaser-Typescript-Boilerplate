@@ -8,6 +8,7 @@ const configuration: webpack.Configuration | webpackdev.Configuration = {
   devServer: {
     static: {
       directory: path.join(__dirname, "../assets"),
+      publicPath: '/assets'
     },
     client: {
       //  Prints compilation progress in percentage in the browser.
