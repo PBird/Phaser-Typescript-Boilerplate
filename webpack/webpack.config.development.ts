@@ -7,7 +7,7 @@ const configuration: webpack.Configuration | webpackdev.Configuration = {
   devtool: "inline-source-map",
   devServer: {
     static: {
-      directory: path.join(__dirname, "assets"),
+      directory: path.join(__dirname, "../assets"),
     },
     client: {
       //  Prints compilation progress in percentage in the browser.
