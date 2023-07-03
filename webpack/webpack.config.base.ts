@@ -1,6 +1,6 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import path from "path";
-import webpack from "webpack";
+import type webpack from "webpack";
 
 
 const configuration: webpack.Configuration = {

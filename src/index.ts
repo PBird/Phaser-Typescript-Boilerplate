@@ -6,5 +6,6 @@ const config: Phaser.Types.Core.GameConfig = {
   height: 600,
 };
 const game = new Phaser.Game(config);
+console.log("Hello world!")
 
 export default game;

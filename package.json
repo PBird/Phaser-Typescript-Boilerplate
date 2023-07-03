@@ -7,13 +7,15 @@
     "phaser": "^3.60.0"
   },
   "scripts": {
-    "dev": "webpack --env NODE_ENV=development",
+    "watch": "webpack serve --env NODE_ENV=development",
     "build": "webpack --env NODE_ENV=production"
   },
   "devDependencies": {
     "@types/node": "^20.3.3",
     "@types/webpack": "^5.28.1",
+    "@types/webpack-dev-server": "^4.7.2",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "copy-webpack-plugin": "^11.0.0",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard-with-typescript": "^36.0.0",

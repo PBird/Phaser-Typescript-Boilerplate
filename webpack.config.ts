@@ -3,10 +3,8 @@ import baseConfig from "./webpack/webpack.config.base";
 import devConfig from "./webpack/webpack.config.development";
 import prodConfig from "./webpack/webpack.config.production";
 
-import webpack from 'webpack';
 
-
-const createWebpackConfiguration = (env: any, args: any) => {
+const createWebpackConfiguration= (env: any, args: any) => {
   console.log("env : " ,env.NODE_ENV);
   switch (env.NODE_ENV) {
     case "development":
